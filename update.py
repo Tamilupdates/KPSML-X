@@ -57,20 +57,20 @@ if UPGRADE_PACKAGES.lower() == 'true':
     packages = [dist.project_name for dist in working_set]
     scall("pip install " + ' '.join(packages), shell=True)
 
-UPSTREAM_REPO = environ.get('UPSTREAM_REPO', 'https://github.com/Tamilupdates/KPSML-X')
+UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = None
+    UPSTREAM_REPO = "https://github.com/Tamilupdates/KPSML-X"
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
-    UPSTREAM_BRANCH = 'master'
+    UPSTREAM_BRANCH = 'hk_kpsmlx'
 
 if UPSTREAM_REPO is not None:
     if ospath.exists('.git'):
         srun(["rm", "-rf", ".git"])
 
     update = srun([f"git init -q \
-                     && git config --global user.email nanthakps@gmail.com \
+                     && git config --global user.email doc.nanthakps@gmail.com \
                      && git config --global user.name tamilupdates \
                      && git add . \
                      && git commit -sm update -q \
