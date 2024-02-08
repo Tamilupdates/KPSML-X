@@ -2,15 +2,17 @@
 <p align="center">
     <a href="https://github.com/Tamilupdates/KPSML-X">
         <kbd>
-            <img width="180" src="https://graph.org/file/879239eb830dd6c00b07e.jpg" alt="Deploy Heroku on Google Colab">
+            <img  src="https://graph.org/file/879239eb830dd6c00b07e.jpg" height="200" width="400"alt="WZML-X-logo">
         </kbd>
     </a>
 </p>
 
-### ***🔗 Colab Deployer :*** : [Link](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
+<div align=center>
 
+### **🔗 Colab Deployer :** https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q
 
-### 1. [***🔗 Colab Deployer***](https://github.com/Tamilupdates/KPSML/wiki/Getting-Started)
+</div>
+
 
 ## **HEROKU DEPLOY GUIDE**
 
