@@ -1,6 +1,6 @@
 <div align=center>
 
-## **𝐃𝐄𝐏𝐋𝐎𝐘 𝐊𝐏𝐒𝐌𝐋-𝐗 𝐈𝐍 𝐇𝐄𝐑𝐎𝐊𝐔 𝐔𝐒𝐈𝐍𝐆 𝐆𝐎𝐎𝐆𝐋𝐄 𝐂𝐎𝐋𝐀𝐁**
+# 𝐊𝐏𝐒𝐌𝐋-𝐗 𝐨𝐧 𝐇𝐞𝐫𝐨𝐤𝐮 𝐃𝐞𝐩𝐥𝐨𝐲 𝐮𝐬𝐢𝐧𝐠 𝐆𝐨𝐨𝐠𝐥𝐞 𝐂𝐨𝐥𝐚𝐛
 
 </div>
 
@@ -14,7 +14,7 @@
 
 <div align=center>
 
-## **Google Colab :** [Deploy Link 🔗](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
+## 𝐆𝐨𝐨𝐠𝐥𝐞 𝐂𝐨𝐥𝐚𝐛 : [Deploy Link 🔗](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
 
 </div>
 
