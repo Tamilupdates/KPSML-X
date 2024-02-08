@@ -1,15 +1,20 @@
+<div align=center>
+
 ## **𝐃𝐄𝐏𝐋𝐎𝐘 𝐊𝐏𝐒𝐌𝐋-𝐗 𝐈𝐍 𝐇𝐄𝐑𝐎𝐊𝐔 𝐔𝐒𝐈𝐍𝐆 𝐆𝐎𝐎𝐆𝐋𝐄 𝐂𝐎𝐋𝐀𝐁**
+
+</div>
+
 <p align="center">
     <a href="https://github.com/Tamilupdates/KPSML-X">
         <kbd>
-            <img  src="https://graph.org/file/879239eb830dd6c00b07e.jpg" height="200" width="400"alt="WZML-X-logo">
+            <img  src="https://graph.org/file/879239eb830dd6c00b07e.jpg" width="500" alt="KPSML-X Logo">
         </kbd>
     </a>
 </p>
 
 <div align=center>
 
-### **🔗 Colab Deployer :** [Link](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
+## **Google Colab :** [Deploy Link 🔗](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
 
 </div>
 
