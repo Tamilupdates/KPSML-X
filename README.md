@@ -7,7 +7,7 @@
 <p align="center">
     <a href="https://github.com/Tamilupdates/KPSML-X">
         <kbd>
-            <img src="https://graph.org/file/879239eb830dd6c00b07e.jpg" width="style='height: 100%; width: 100%; object-fit: contain'" alt="KPSML-X Logo">
+            <img src="https://graph.org/file/879239eb830dd6c00b07e.jpg" style="height: 100%; width: 100%; object-fit: contain" alt="KPSML-X Logo">
         </kbd>
     </a>
 </p>
