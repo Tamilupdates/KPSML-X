@@ -39,7 +39,7 @@ if len(DATABASE_URL) == 0:
 
 if DATABASE_URL is not None:
     conn = MongoClient(DATABASE_URL)
-    db = conn.kpsmlx
+    db = conn.wzmlx
     old_config = db.settings.deployConfig.find_one({'_id': bot_id})
     config_dict = db.settings.config.find_one({'_id': bot_id})
     if old_config is not None:
@@ -52,11 +52,11 @@ if DATABASE_URL is not None:
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = "https://github.com/Tamilupdates/KPSML-X"
+    UPSTREAM_REPO = None
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
-    UPSTREAM_BRANCH = 'hk_kpsmlx'
+    UPSTREAM_BRANCH = 'master'
 
 if UPSTREAM_REPO is not None:
     if ospath.exists('.git'):
