@@ -13,9 +13,6 @@
 
 </div>
 
-
-## **HEROKU DEPLOY GUIDE**
-
 ---
 
 ## ***Heroku CLI Guide***
