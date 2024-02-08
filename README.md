@@ -9,7 +9,7 @@
 
 <div align=center>
 
-### **🔗 Colab Deployer :** https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q
+### **🔗 Colab Deployer :** [Link](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
 
 </div>
 
