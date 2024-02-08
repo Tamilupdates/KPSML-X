@@ -1,13 +1,13 @@
 <div align=center>
 
-# 𝐊𝐏𝐒𝐌𝐋-𝐗 𝐨𝐧 𝐇𝐞𝐫𝐨𝐤𝐮 𝐃𝐞𝐩𝐥𝐨𝐲 𝐮𝐬𝐢𝐧𝐠 𝐆𝐨𝐨𝐠𝐥𝐞 𝐂𝐨𝐥𝐚𝐛
+## 𝐊𝐏𝐒𝐌𝐋-𝐗 𝐨𝐧 𝐇𝐞𝐫𝐨𝐤𝐮 𝐃𝐞𝐩𝐥𝐨𝐲 𝐮𝐬𝐢𝐧𝐠 𝐆𝐨𝐨𝐠𝐥𝐞 𝐂𝐨𝐥𝐚𝐛
 
 </div>
 
 <p align="center">
     <a href="https://github.com/Tamilupdates/KPSML-X">
         <kbd>
-            <img src="https://graph.org/file/879239eb830dd6c00b07e.jpg" width="500" alt="KPSML-X Logo">
+            <img src="https://graph.org/file/879239eb830dd6c00b07e.jpg" width="550" alt="KPSML-X Logo">
         </kbd>
     </a>
 </p>
