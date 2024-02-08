@@ -1,4 +1,18 @@
-# **HEROKU DEPLOY GUIDE**
+## **𝐃𝐄𝐏𝐋𝐎𝐘 𝐊𝐏𝐒𝐌𝐋-𝐗 𝐈𝐍 𝐇𝐄𝐑𝐎𝐊𝐔 𝐔𝐒𝐈𝐍𝐆 𝐆𝐎𝐎𝐆𝐋𝐄 𝐂𝐎𝐋𝐀𝐁**
+<p align="center">
+    <a href="https://github.com/Tamilupdates/KPSML-X">
+        <kbd>
+            <img width="180" src="https://graph.org/file/879239eb830dd6c00b07e.jpg" alt="Deploy Heroku on Google Colab">
+        </kbd>
+    </a>
+</p>
+
+### ***🔗 Colab Deployer :*** : [Link](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
+
+
+### 1. [***🔗 Colab Deployer***](https://github.com/Tamilupdates/KPSML/wiki/Getting-Started)
+
+## **HEROKU DEPLOY GUIDE**
 
 ---
 
@@ -57,8 +71,8 @@ heroku create --region us --stack container APP_NAME
 **To Be Noted**: Copy the `BASE_URL` after the App is Created and Put the Value in `BASE_URL` when editing `config.env`
 
 **Notes:**
-- `--region eu` for Europe Server.
 - `--region us` for United States Server.
+- `--region eu` for Europe Server.
 - `APP_NAME` should be replaced with your unique app name _(Optional)_. If not given it generates a random name.
 - `--stack container` for setting stack to container for Dockerfile.
 - `--buildpack heroku/python` for using build slug for repo deploy and build.
@@ -76,11 +90,11 @@ nano config.env
   TELEGRAM_API = ""
   TELEGRAM_HASH = ""
   OWNER_ID = ""
-  UPSTREAM_REPO = "https://github.com/Tamilupdates/KPSML-X"
-  UPSTREAM_BRANCH = "hk_kpsmlx"
   DATABASE_URL = ""
   BASE_URL = ""
-  TORRENT_TIMEOUT = "0"
+  SET_COMMANDS = "True"
+  UPSTREAM_REPO = "https://github.com/Tamilupdates/KPSML-X"
+  UPSTREAM_BRANCH = "hk_kpsmlx"
   ```
 - After Setup Exit from Editor via `CTRL + X`, followed via `y` and `Enter`...
 
