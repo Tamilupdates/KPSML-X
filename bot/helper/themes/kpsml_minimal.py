@@ -6,7 +6,7 @@ class KPSMLStyle:
     ST_BN1_URL = 'https://telegram.me/KPSBots'
     ST_BN2_NAME = 'Updates 🔥'
     ST_BN2_URL = 'https://telegram.me/KPSTorrent'
-    ST_MSG = '''<b><i>This bot can mirror all your links | files | torrents to Google Drive or any rclone cloud or to telegram or to ddl servers.</i>\n
+    ST_MSG = '''<b><i>This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram or to ddl servers.</i>\n
 Type {help_command} to get a list of available commands</b>'''
     ST_BOTPM = '''<i>Now, This bot will send all your files and links here. Start Using ...</i>'''
     ST_UNAUTH = '''<i>You Are not authorized user! Deploy your own KPSML-X Mirror-Leech bot</i>'''
