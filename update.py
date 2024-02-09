@@ -39,7 +39,7 @@ if len(DATABASE_URL) == 0:
 
 if DATABASE_URL is not None:
     conn = MongoClient(DATABASE_URL)
-    db = conn.wzmlx
+    db = conn.kpsmlx
     old_config = db.settings.deployConfig.find_one({'_id': bot_id})
     config_dict = db.settings.config.find_one({'_id': bot_id})
     if old_config is not None:
@@ -52,11 +52,11 @@ if DATABASE_URL is not None:
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = None
+    UPSTREAM_REPO = "https://github.com/Tamilupdates/KPSML-X"
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
-    UPSTREAM_BRANCH = 'master'
+    UPSTREAM_BRANCH = 'hk_kpsmlx'
 
 if UPSTREAM_REPO is not None:
     if ospath.exists('.git'):
@@ -71,11 +71,11 @@ if UPSTREAM_REPO is not None:
                      && git fetch origin -q \
                      && git reset --hard origin/{UPSTREAM_BRANCH} -q"], shell=True)
 
-    repo = UPSTREAM_REPO.split('/')
-    UPSTREAM_REPO = f"https://github.com/{repo[-2]}/{repo[-1]}"
     if update.returncode == 0:
-        log_info('Successfully updated with latest commits !!')
-        log_info(f'UPSTREAM_REPO: {UPSTREAM_REPO} | UPSTREAM_BRANCH: {UPSTREAM_BRANCH}')
+        log_info('Successfully updated with latest commit.')
+        log_info(f'Repo in use: {UPSTREAM_REPO}')
+        log_info(f'Branch in use: {UPSTREAM_BRANCH}')
     else:
-        log_error('Something went Wrong !!')
-        log_error(f'UPSTREAM_REPO: {UPSTREAM_REPO} | UPSTREAM_BRANCH: {UPSTREAM_BRANCH}')
+        log_error('Something went wrong while updating.')
+        log_info('Check if entered UPSTREAM_REPO is valid or not!')
+        log_info(f'Entered upstream repo: {UPSTREAM_REPO}')
