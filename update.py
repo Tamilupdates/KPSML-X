@@ -78,10 +78,11 @@ if UPSTREAM_REPO is not None:
                      && git fetch origin -q \
                      && git reset --hard origin/{UPSTREAM_BRANCH} -q"], shell=True)
 
-    repo = UPSTREAM_REPO.split('/')
-    UPSTREAM_REPO = f"https://github.com/{repo[-2]}/{repo[-1]}"
     if update.returncode == 0:
-        log_info('Successfully updated with latest commits !!')
+        log_info('Successfully updated with latest commit.')
+        log_info(f'Repo in use: {UPSTREAM_REPO}')
+        log_info(f'Branch in use: {UPSTREAM_BRANCH}')
     else:
-        log_error('Something went Wrong ! Retry or Ask Support !')
-    log_info(f'UPSTREAM_REPO: {UPSTREAM_REPO} | UPSTREAM_BRANCH: {UPSTREAM_BRANCH}')
+        log_error('Something went wrong while updating.')
+        log_info('Check if entered UPSTREAM_REPO is valid or not!')
+        log_info(f'Entered upstream repo: {UPSTREAM_REPO}')
