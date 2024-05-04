@@ -136,10 +136,9 @@ heroku logs -a APP_NAME
 
 ## ***Variables Description:***
 
-- `UPSTREAM_REPO`: GitLab repository URL, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}`
+- `UPSTREAM_REPO`: GitHub repository URL, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}`
 ` format. `Str`.
-  - **NOTE**: Don't forget to remove '<' and '>'. To generate gitlab Deploy Token. Follow [This](https://docs.gitlab.com/ee/user/project/deploy_tokens/#create-a-deploy-token)
-              - Any change in docker you need to deploy/build again with updated repo to take effect. 
+- Any change in docker you need to deploy/build again with updated repo to take effect. 
               - **No Need to delete .gitignore file or any File**
 - `UPSTREAM_BRANCH`: Upstream branch for update. Default is `hk_kpsmlx`. `Str`
 - `BOT_TOKEN`: Telegram Bot Token that you got from [BotFather](https://t.me/BotFather). `Str`
