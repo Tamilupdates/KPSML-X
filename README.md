@@ -136,7 +136,7 @@ heroku logs -a APP_NAME
 
 ## ***Variables Description:***
 
-- `UPSTREAM_REPO`: GitLab repository URL, if your repo is private add `https://<deploy_token>:<password>@gitlab.com/<your_username>/<repository_name>
+- `UPSTREAM_REPO`: GitLab repository URL, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}`
 ` format. `Str`.
   - **NOTE**: Don't forget to remove '<' and '>'. To generate gitlab Deploy Token. Follow [This](https://docs.gitlab.com/ee/user/project/deploy_tokens/#create-a-deploy-token)
               - Any change in docker you need to deploy/build again with updated repo to take effect. 
