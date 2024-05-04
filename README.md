@@ -2,9 +2,7 @@
 
 ## 𝐊𝐏𝐒𝐌𝐋-𝐗 𝐨𝐧 𝐇𝐞𝐫𝐨𝐤𝐮 𝐃𝐞𝐩𝐥𝐨𝐲 𝐮𝐬𝐢𝐧𝐠 𝐆𝐨𝐨𝐠𝐥𝐞 𝐂𝐨𝐥𝐚𝐛
 
-</div>
-
-<p align="center">
+<p>
     <a href="https://github.com/Tamilupdates/KPSML-X">
         <kbd>
             <img src="https://graph.org/file/879239eb830dd6c00b07e.jpg" width="550" alt="KPSML-X Logo">
@@ -12,9 +10,13 @@
     </a>
 </p>
 
-<div align=center>
-
 ### <img src="https://graph.org/file/504ba776ef0724a4ae85b.png" width="25" alt="Google Colab Logo"> 𝐆𝐨𝐨𝐠𝐥𝐞 𝐂𝐨𝐥𝐚𝐛 : [𝐃𝐞𝐩𝐥𝐨𝐲 𝐋𝐢𝐧𝐤](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
+
+---
+
+## 𝐃𝐞𝐩𝐥𝐨𝐲 𝐨𝐧 𝐇𝐞𝐫𝐨𝐤𝐮
+
+[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Tamilupdates/KPSML-X)
 
 </div>
 

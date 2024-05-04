@@ -1,6 +1,7 @@
 from logging import FileHandler, StreamHandler, INFO, basicConfig, error as log_error, info as log_info
 from os import path as ospath, environ, remove
-from subprocess import run as srun
+from subprocess import run as srun, call as scall
+from pkg_resources import working_set
 from requests import get as rget
 from dotenv import load_dotenv, dotenv_values
 from pymongo import MongoClient
@@ -16,6 +17,22 @@ basicConfig(format="[%(asctime)s] [%(levelname)s] - %(message)s",
             datefmt="%d-%b-%y %I:%M:%S %p",
             handlers=[FileHandler('log.txt'), StreamHandler()],
             level=INFO)
+
+CONFIG_FILE_URL = environ.get('CONFIG_FILE_URL')
+try:
+    if len(CONFIG_FILE_URL) == 0:
+        raise TypeError
+    try:
+        res = rget(CONFIG_FILE_URL)
+        if res.status_code == 200:
+            with open('config.env', 'wb+') as f:
+                f.write(res.content)
+        else:
+            log_error(f"Failed to download config.env {res.status_code}")
+    except Exception as e:
+        log_error(f"CONFIG_FILE_URL: {e}")
+except:
+    pass
 
 load_dotenv('config.env', override=True)
 
@@ -48,11 +65,17 @@ if DATABASE_URL is not None:
             and config_dict is not None:
         environ['UPSTREAM_REPO'] = config_dict['UPSTREAM_REPO']
         environ['UPSTREAM_BRANCH'] = config_dict['UPSTREAM_BRANCH']
+        environ['UPGRADE_PACKAGES'] = config_dict.get('UPDATE_PACKAGES', 'False')
     conn.close()
+
+UPGRADE_PACKAGES = environ.get('UPGRADE_PACKAGES', 'False') 
+if UPGRADE_PACKAGES.lower() == 'true':
+    packages = [dist.project_name for dist in working_set]
+    scall("pip install " + ' '.join(packages), shell=True)
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = 'https://github.com/Tamilupdates/KPSML-X'
+    UPSTREAM_REPO = "https://github.com/Tamilupdates/KPSML-X"
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
@@ -75,7 +98,6 @@ if UPSTREAM_REPO is not None:
     UPSTREAM_REPO = f"https://github.com/{repo[-2]}/{repo[-1]}"
     if update.returncode == 0:
         log_info('Successfully updated with latest commits !!')
-        log_info(f'UPSTREAM_REPO: {UPSTREAM_REPO} | UPSTREAM_BRANCH: {UPSTREAM_BRANCH}')
     else:
-        log_error('Something went Wrong !!')
-        log_error(f'UPSTREAM_REPO: {UPSTREAM_REPO} | UPSTREAM_BRANCH: {UPSTREAM_BRANCH}')
+        log_error('Something went Wrong ! Retry or Ask Support !')
+    log_info(f'UPSTREAM_REPO: {UPSTREAM_REPO} | UPSTREAM_BRANCH: {UPSTREAM_BRANCH}')

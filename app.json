@@ -1,0 +1,21 @@
+{
+    "name": "KPSML-X Bot",
+    "description": "KPSML-X Bot with Heroku Deploy",
+    "keywords": [
+      "telegram"
+    ],
+    "repository": "https://github.com/Tamilupdates/KPSML-X",
+    "stack": "container",
+    "env": {
+        "CONFIG_FILE_URL": {
+            "description": "Config File URL",
+            "required": true
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "Basic"
+        }
+    }
+}
