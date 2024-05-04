@@ -44,7 +44,7 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
                   'IMG_PAGE': 1,
                   'AUTHOR_NAME': 'KPS Bots',
                   'AUTHOR_URL': 'https://telegram.me/KPSBots',
-                  'TITLE_NAME': 'WZ Mirror/Leech X',
+                  'TITLE_NAME': 'Leech Bot',
                   'GD_INFO': 'Uploaded by Leech Bot',
                   }
 bool_vars = ['AS_DOCUMENT', 'BOT_PM', 'STOP_DUPLICATE', 'SET_COMMANDS', 'SAVE_MSG', 'SHOW_MEDIAINFO', 'SOURCE_LINK', 'SAFE_MODE', 'SHOW_EXTRA_CMDS',
