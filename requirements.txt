@@ -40,5 +40,6 @@ telegraph
 tenacity
 tgcrypto
 uvloop
+pytz
 xattr
 yt-dlp==2023.10.07
