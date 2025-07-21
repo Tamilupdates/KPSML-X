@@ -41,5 +41,5 @@ tenacity
 tgcrypto
 uvloop
 xattr
+yt-dlp[default,curl-cffi]
 pytz
-yt-dlp
