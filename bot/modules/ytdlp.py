@@ -250,7 +250,7 @@ async def _ytdl(client, message, isLeech=False, sameDir=None, bulk=[]):
                 '-s': False, '-select': False,
                 '-opt': '', '-options': '',
                 '-b': False, '-bulk': False,
-                '-n': '', '-name': '',
+                '-n': '', '-name': '', '|': '',
                 '-z': False, '-zip': False,
                 '-up': '', '-upload': False,
                 '-rcf': '',
@@ -274,7 +274,7 @@ async def _ytdl(client, message, isLeech=False, sameDir=None, bulk=[]):
     isBulk      = args['-b'] or args['-bulk']
     opt         = args['-opt'] or args['-options']
     folder_name = args['-m'] or args['-sd'] or args['-samedir']
-    name        = args['-n'] or args['-name']
+    name        = args['-n'] or args['-name'] or args['|']
     up          = args['-up'] or args['-upload']
     rcf         = args['-rcf']
     link        = args['link']
