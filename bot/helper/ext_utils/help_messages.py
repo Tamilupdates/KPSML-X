@@ -5,7 +5,7 @@ YT_HELP_MESSAGE = ["""<i>Send links/files along with cmd or reply to cmd to mirr
 
 ➲ <b><u>Available Args</u></b>:
 
-1.  <b>-n or -name :</b> Rename file.
+1.  <b>-n or -name or | :</b> Rename file.
 2.  <b>-z or -zip :</b> Zip files or Links
 3.  <b>-up or -upload :</b> Upload to your Drive or RClone or DDL
 4.  <b>-b or -bulk :</b> Download bulk links.
@@ -27,7 +27,7 @@ YT_HELP_MESSAGE = ["""<i>Send links/files along with cmd or reply to cmd to mirr
 ➲ <b><i>By replying to link</i></b>:
 <code>/cmd</code> -n  new name -z password -opt x:y|x1:y1
 
-➲ <b><i>New Name</i></b>: -n or -name
+➲ <b><i>New Name</i></b>: -n or -name or |
 <code>/cmd</code> link -n new name
 <b>Note:</b> Don't add file extension
 
@@ -112,7 +112,7 @@ MIRROR_HELP_MESSAGE = ["""<i>Send links/files along with cmd or reply to cmd to 
 
 ➲ <b><u>Available Args</u></b>:
 
-1.  <b>-n or -name :</b> Rename file.
+1.  <b>-n or -name or | :</b> Rename file.
 2.  <b>-z or -zip :</b> Zip files or Links
 3.  <b>-e or -extract or -uz or -unzip :</b> Extract/Unzip files from Archive
 4.  <b>-up or -upload :</b> Upload to your Drive or RClone or DDL
@@ -138,7 +138,7 @@ MIRROR_HELP_MESSAGE = ["""<i>Send links/files along with cmd or reply to cmd to 
 ➲ <b><i>By replying to link/file</i></b>:
 <code>/cmd</code> -n new name -z -e -up upload_destination
 
-➲ <b><i>Custom New Name</i></b>: -n or -name
+➲ <b><i>Custom New Name</i></b>: -n or -name or |
 <code>/cmd</code> link -n new name
 <b>NOTES</b>: Doesn't work with torrents.
 
