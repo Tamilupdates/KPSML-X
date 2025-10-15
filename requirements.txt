@@ -25,6 +25,7 @@ motor
 mutagen
 markdown
 natsort
+pytz
 pillow
 psutil
 pybase64
@@ -39,7 +40,8 @@ speedtest-cli
 telegraph
 tenacity
 tgcrypto
+uv
 uvloop
 xattr
-yt-dlp[default,curl-cffi]
-pytz
+yt-dlp
+setuptools
