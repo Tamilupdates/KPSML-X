@@ -136,6 +136,14 @@ async def load_config():
     if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
         MEGA_EMAIL = ''
         MEGA_PASSWORD = ''
+
+    METADATA = environ.get('METADATA', '')
+    if len(METADATA) == 0:
+        METADATA = ''
+
+    ATTACHMENT = environ.get('ATTACHMENT', '')
+    if len(ATTACHMENT) == 0:
+        ATTACHMENT = ''
       
     GDTOT_CRYPT = environ.get('GDTOT_CRYPT', '')
     if len(GDTOT_CRYPT) == 0:
@@ -642,6 +650,8 @@ async def load_config():
                         'INCOMPLETE_TASK_NOTIFIER': INCOMPLETE_TASK_NOTIFIER,
                         'INDEX_URL': INDEX_URL,
                         'IS_TEAM_DRIVE': IS_TEAM_DRIVE,
+                        'METADATA': METADATA,
+                        'ATTACHMENT': ATTACHMENT,
                         'LEECH_FILENAME_PREFIX': LEECH_FILENAME_PREFIX,
                         'LEECH_FILENAME_SUFFIX': LEECH_FILENAME_SUFFIX,
                         'LEECH_FILENAME_CAPTION': LEECH_FILENAME_CAPTION,
