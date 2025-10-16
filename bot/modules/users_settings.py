@@ -175,17 +175,19 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
         buttons.ibutton("Leech Dump", f"userset {user_id} ldump")
         ldump = 'Not Exists' if (val:=user_dict.get('ldump', '')) == '' else len(val)
 
-        lattachment = user_dict.get('lattachment') or 'Not Exists'
-        buttons.ibutton(f"{'✅' if lattachment != 'Not Exists' else ''} Attachment", f"userset {user_id} lattachment")
+        lattachment = 'Not Exists' if (val:=user_dict.get('lattachment', config_dict.get('ATTACHMENT', ''))) == '' else val
+        buttons.ibutton(f"{'✅️' if lattachment != 'Not Exists' else ''} Leech Attachment", f"userset {user_id} lattachment")
 
-        metadata = user_dict.get('metadata') or 'Not Exists'
-        buttons.ibutton(f"{'✅' if metadata != 'Not Exists' else ''} Metadata", f"userset {user_id} metadata")
+        metadata = 'Not Exists' if (val:=user_dict.get('metadata', config_dict.get('METADATA', ''))) == '' else val
+        buttons.ibutton(f"{'✅️' if metadata != 'Not Exists' else ''} Leech Metadata", f"userset {user_id} metadata")
 
         text = BotTheme('LEECH', NAME=name, DL=f"{dailyll} / {dailytlle}",
                 LTYPE=ltype, THUMB=thumbmsg, SPLIT_SIZE=split_size,
                 EQUAL_SPLIT=equal_splits, MEDIA_GROUP=media_group,
                 LCAPTION=escape(lcaption), LPREFIX=escape(lprefix),
-                LSUFFIX=escape(lsuffix), LDUMP=ldump, LREMNAME=escape(lremname), METADATA=metadata, ATTACHMENT=lattachment)
+                LSUFFIX=escape(lsuffix), LREMNAME=escape(lremname), 
+                LDUMP=ldump, METADATA=escape(metadata),
+                ATTACHMENT=escape(lattachment))
 
         buttons.ibutton("Back", f"userset {user_id} back", "footer")
         buttons.ibutton("Close", f"userset {user_id} close", "footer")
@@ -301,6 +303,10 @@ async def user_settings(client, message):
     /cmd -s lremname
 ➲ <b>Leech Filename Caption :</b>
     /cmd -s lcaption
+➲ <b>Leech Filename Metadata :</b>
+    /cmd -s metadata
+➲ <b>Leech Filename Attachment :</b>
+    /cmd -s lattachment
 ➲ <b>YT-DLP Options :</b>
     /cmd -s yt_opt
 ➲ <b>Leech User Dump :</b>
@@ -618,7 +624,7 @@ async def edit_user_settings(client, query):
         pfunc = partial(set_custom, pre_event=query, key=data[2])
         rfunc = partial(update_user_settings, query, data[2], 'mirror' if data[2] in ['ddl_servers', 'user_tds'] else "ddl_servers")
         await event_handler(client, query, pfunc, rfunc)
-    elif data[2] in ['lprefix', 'lsuffix', 'lremname', 'lcaption', 'ldump', 'metadata', 'lattachment', 'mprefix', 'msuffix', 'mremname']:
+    elif data[2] in ['lprefix', 'lsuffix', 'lremname', 'lcaption', 'ldump', 'mprefix', 'msuffix', 'mremname', 'metadata', 'lattachment']:
         handler_dict[user_id] = False
         await query.answer()
         edit_mode = len(data) == 4

@@ -671,7 +671,17 @@ def terabox(url):
     return details
 
 
+
 def gofile(url, auth):
+    try:
+        _id = url.split('/')[-1]
+        worker_base_url = "https://gofile.kpsbots.workers.dev/"
+        gofile_url = f"{worker_base_url}{_id}"
+        return gofile_url
+    except Exception as e:
+        raise e
+
+    '''    
     try:
         _password = sha256(auth[1].encode("utf-8")).hexdigest() if auth else ""
         _id = url.split("/")[-1]
@@ -767,8 +777,7 @@ def gofile(url, auth):
     if len(details["contents"]) == 1:
         return (details["contents"][0]["url"], details["header"])
     return details
-
-
+    '''
 
 def gd_index(url, auth):
     if not auth:

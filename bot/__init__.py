@@ -239,7 +239,15 @@ if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
     log_warning('MEGA Credentials not provided!')
     MEGA_EMAIL = ''
     MEGA_PASSWORD = ''
-    
+
+METADATA = environ.get('METADATA', '')
+if len(METADATA) == 0:
+    METADATA = ''
+
+ATTACHMENT = environ.get('ATTACHMENT', '')
+if len(ATTACHMENT) == 0:
+    ATTACHMENT = ''
+
 GDTOT_CRYPT = environ.get('GDTOT_CRYPT', '')
 if len(GDTOT_CRYPT) == 0:
     GDTOT_CRYPT = ''
@@ -612,6 +620,8 @@ config_dict = {'ANIME_TEMPLATE': ANIME_TEMPLATE,
                'CAP_FONT': CAP_FONT,
                'CMD_SUFFIX': CMD_SUFFIX,
                'DATABASE_URL': DATABASE_URL,
+               'METADATA': METADATA,
+               'ATTACHMENT': ATTACHMENT,
                'REAL_DEBRID_API': REAL_DEBRID_API,
                'DEBRID_LINK_API': DEBRID_LINK_API,
                'FILELION_API': FILELION_API,

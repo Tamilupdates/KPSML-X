@@ -277,8 +277,7 @@ class MirrorLeechListener:
                 self.newDir = ""
                 up_path = dl_path
 
-
-        if metadata := self.user_dict.get("metadata"):
+        if metadata := self.user_dict.get('metadata') or config_dict['METADATA']:
             meta_path = up_path or dl_path
             self.newDir = f'{self.dir}10000'
             await makedirs(self.newDir, exist_ok=True)
@@ -300,7 +299,7 @@ class MirrorLeechListener:
                             outfile = ospath.join(self.newDir, file)
                             await edit_metadata(self, dirpath, video_file, outfile, metadata)
 
-        if attachment := self.user_dict.get("lattachment"):
+        if attachment := self.user_dict.get("lattachment") or config_dict['ATTACHMENT']:
             meta_path = up_path or dl_path
             self.newDir = f'{self.dir}10000'
             await makedirs(self.newDir, exist_ok=True)

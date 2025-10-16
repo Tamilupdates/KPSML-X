@@ -296,5 +296,5 @@ Type {help_command} to get a list of available commands</b>'''
 ┠<b> Leech Suffix :</b> <code>{LSUFFIX}</code>
 ┠<b> Leech Remname :</b> <code>{LREMNAME}</code>
 ┠<b> Leech Dumps :</b> <code>{LDUMP}</code>
-┠<b> Attachment :</b> <code>{ATTACHMENT}</code>
-┖<b> Metadata :</b> <b><code>{METADATA}</code></b>'''
+┠<b> Leech Attachment :</b> <code>{ATTACHMENT}</code>
+┖<b> Leech Metadata :</b> <b><code>{METADATA}</code></b>'''

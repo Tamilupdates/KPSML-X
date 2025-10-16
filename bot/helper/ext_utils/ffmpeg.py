@@ -1,5 +1,4 @@
-import os
-import re
+from os import path as os_path
 import logging
 from re import sub as re_sub
 from aioshutil import move
@@ -12,9 +11,24 @@ LOGGER = logging.getLogger(__name__)
 
 ########-------- Metadata -------------#########
 async def edit_metadata(listener, base_dir: str, media_file: str, outfile: str, metadata: str = ''):
-    file_name = os.path.basename(media_file)  # Get the filename without path
-    file_namex = re_sub(r'www\S+', '', file_name)
-    title_metadata = f'{metadata}{file_namex}'
+    file_name = os_path.basename(media_file)  # Get the filename without path
+    basename = os_path.splitext(file_name)[0]
+    basenameX = re_sub(r'www\S+', '', basename)
+    basenameX = re_sub(r'(^\s*-\s*|(\s*-\s*){2,})', '', basenameX)
+
+    # 1. Check if the file is in .mkv format.
+    file_ext = os_path.splitext(file_name)[-1].lower()
+    if file_ext != '.mkv':
+        # Skip attachment process for .mkv files.
+        return
+
+    # Conditional metadata title
+    if basename.strip().lower().startswith("www"):
+        title_metadata = f"{metadata} - {basenameX}"
+    elif basename.strip().lower().startswith("@"):
+        title_metadata = f"{basenameX}"
+    else:
+        title_metadata = metadata  # default
 
     cmd = [
         bot_cache['pkgs'][2], '-i', media_file,
@@ -41,7 +55,16 @@ async def edit_metadata(listener, base_dir: str, media_file: str, outfile: str, 
 
 ########-------- Attachment -------------#########
 async def edit_attachment(listener, base_dir: str, media_file: str, outfile: str, attachment: str = ''):
-    #Attachment
+    # Attaches a file to a media file using FFmpeg, only if the outfile has a .mkv extension.
+    file_name = os_path.basename(media_file)  # Get the filename without path
+
+    # 1. Check if the file is in .mkv format.
+    file_ext = os_path.splitext(file_name)[-1].lower()
+    if file_ext != '.mkv':
+        # Skip attachment process for .mkv files.
+        return
+
+    # 2. Proceed with the original attachment for .mkv files
     omg = "photo"  
     attachment_ext = attachment.split(".")[-1].lower()   
     mime_type = "application/octet-stream"

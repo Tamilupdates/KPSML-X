@@ -1,6 +1,6 @@
 from hashlib import md5
 from time import strftime, gmtime, time
-from re import sub as re_sub, search as re_search
+from re import IGNORECASE, sub as re_sub, search as re_search
 from shlex import split as ssplit
 from natsort import natsorted
 from os import path as ospath
@@ -250,7 +250,14 @@ async def format_filename(file_, user_id, dirpath=None, isMirror=False):
     lcaption = config_dict['LEECH_FILENAME_CAPTION'] if (val:=user_dict.get('lcaption', '')) == '' else val
  
     prefile_ = file_
-    file_ = re_sub(r'www\S+', '', file_)
+    #file_ = re_sub(r'www\S+', '', file_)
+    
+    # Remove URLs starting with "www"
+    file_ = re_sub(r'www\S+', '', file_, flags=IGNORECASE)
+
+    # Remove leading/trailing dashes and extra spaces
+    # file_ = re_sub(r'^\s*-\s*', '', file_)
+    file_ = re_sub(r'(^\s*-\s*|(\s*-\s*){2,})', '', file_)
         
     if remname:
         if not remname.startswith('|'):
