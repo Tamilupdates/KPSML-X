@@ -19,13 +19,6 @@ from socket import setdefaulttimeout
 from logging import getLogger, Formatter, FileHandler, StreamHandler, INFO, ERROR, basicConfig, error as log_error, info as log_info, warning as log_warning
 from uvloop import install
 
-# --- Add this block to ensure an event loop exists ---
-try:
-    loop = get_event_loop()
-except RuntimeError:
-    loop = new_event_loop()
-    set_event_loop(loop)
-
 faulthandler_enable()
 install()
 setdefaulttimeout(600)
@@ -226,6 +219,13 @@ def wztgClient(*args, **kwargs):
     if 'max_concurrent_transmissions' in signature(tgClient.__init__).parameters:
         kwargs['max_concurrent_transmissions'] = 1000
     return tgClient(*args, **kwargs)
+
+# --- Add this block to ensure an event loop exists ---
+try:
+    loop = get_event_loop()
+except RuntimeError:
+    loop = new_event_loop()
+    set_event_loop(loop)
 
 IS_PREMIUM_USER = False
 user = ''
