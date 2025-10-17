@@ -6,7 +6,7 @@ from inspect import signature
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from pyrogram import Client as tgClient, enums, utils as pyroutils
 from pymongo import MongoClient
-from asyncio import Lock
+from asyncio import Lock, get_event_loop, new_event_loop, set_event_loop
 from dotenv import load_dotenv, dotenv_values
 from threading import Thread
 from time import sleep, time
@@ -18,6 +18,13 @@ from faulthandler import enable as faulthandler_enable
 from socket import setdefaulttimeout
 from logging import getLogger, Formatter, FileHandler, StreamHandler, INFO, ERROR, basicConfig, error as log_error, info as log_info, warning as log_warning
 from uvloop import install
+
+# --- Add this block to ensure an event loop exists ---
+try:
+    loop = get_event_loop()
+except RuntimeError:
+    loop = new_event_loop()
+    set_event_loop(loop)
 
 faulthandler_enable()
 install()
