@@ -221,11 +221,11 @@ def wztgClient(*args, **kwargs):
     return tgClient(*args, **kwargs)
 
 # --- Add this block to ensure an event loop exists ---
-try:
-    loop = get_event_loop()
-except RuntimeError:
-    loop = new_event_loop()
-    set_event_loop(loop)
+# try:
+#     loop = get_event_loop()
+# except RuntimeError:
+#     loop = new_event_loop()
+#     set_event_loop(loop)
 
 IS_PREMIUM_USER = False
 user = ''
