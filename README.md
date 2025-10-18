@@ -46,4 +46,4 @@
 
 - All files to be Uploaded in `main` Branch and set Upstream as `hk_kpsmlx` Branch.
 
-- View the **Main Branch:**: [main](https://github.com/Tamilupdates/KPSML-X/tree/main)
+- View the **Main Branch**: **[main](https://github.com/Tamilupdates/KPSML-X/tree/main)**
