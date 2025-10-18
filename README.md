@@ -397,4 +397,4 @@ heroku logs -a APP_NAME
 ## 🌿 Branch Specifications
 
 - All files to be Uploaded in `main` Branch and set Upstream as `hk_kpsmlx` Branch.
-- View the **Upstream Branch**: **[hk_kpsmlx](https://github.com/Tamilupdates/KPSML-X/tree/hk_kpsmlx)**
+- View the **Upstream Branch**: [hk_kpsmlx](https://github.com/Tamilupdates/KPSML-X/tree/hk_kpsmlx)
