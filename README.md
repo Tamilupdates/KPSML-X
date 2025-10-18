@@ -17,7 +17,7 @@
 <a href="https://github.com/Tamilupdates/KPSML-X/fork"><img alt="Forks" src="https://img.shields.io/github/forks/Tamilupdates/KPSML-X?style=for-the-badge&logo=git&color=orange"></a> <a href="https://github.com/Tamilupdates/KPSML-X/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Tamilupdates/KPSML-X?style=for-the-badge&logo=github&color=FFD700"></a>
 <a href="https://hub.docker.com/r/nanthakps/kpsmlx"><img src="https://img.shields.io/docker/pulls/nanthakps/kpsmlx?style=for-the-badge&logo=docker" alt="Docker Pulls"></a>
 
-<a href="https://telegram.me/KPSBots"><img alt="Telegram Channel" src="https://img.shields.io/badge/Join%20on%20Telegram%20Channel-blue?style=for-the-badge&logo=telegram&logoColor=white" width="300"></a>
+<a href="https://telegram.me/KPSBots"><img alt="Telegram Channel" src="https://img.shields.io/badge/Join%20on%20Telegram%20Channel-blue?style=for-the-badge&logo=telegram&logoColor=white" width="250"></a>
 
 ### ⚡️ Download Anything. Upload Everywhere. 🔥
 
