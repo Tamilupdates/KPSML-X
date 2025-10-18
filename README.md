@@ -6,8 +6,7 @@
 
 <a href="https://t.me/KPSBots"><img alt="Telegram" src="https://img.shields.io/badge/Join%20on%20Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"></a>
 
-### ⚡️ Download Anything.
-### Upload Everywhere. 🔥
+### ⚡️ Download Anything. Upload Everywhere. 🔥
 
 </div>
 
@@ -19,7 +18,6 @@
 > Designed for speed, flexibility, and simplicity. ⚡
 
 ### 🚀 **Key Highlights**
-
 - **🌐 Universal Downloader** — Fetch from torrents, Mega, Google Drive, direct links, or any `yt-dlp` supported site.  
 - **☁️ Cloud Uploader** — Mirror files to Google Drive, Telegram Cloud, Rclone remotes, or DDL servers in seconds.  
 - **📦 Smart File Handling** — Automatically renames, tags, and organizes media metadata (titles, languages, etc.).  
