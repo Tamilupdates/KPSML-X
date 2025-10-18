@@ -19,7 +19,7 @@
 ## Deployment Guide (VPS)
 
 <details>
-  <summary><strong>View All Steps <kbd>Click Here</kbd></strong></summary>
+  <summary><strong>View All Steps  <kbd>Click Here</kbd></strong></summary>
 
 ---
 
