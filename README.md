@@ -26,7 +26,7 @@
 
 ---
 
-## 📌 Key Highlights
+## ✨ Key Highlights 📌
 
 <details>
   <summary><strong>View All Highlights  <kbd>Click Here</kbd></strong></summary>
@@ -53,7 +53,7 @@ _KPSML-X is designed to make file management seamless, fast, and flexible._
 
 - **💨 Lightweight Performance** — Optimized Python & Pyrogram async engine for speed.  
 
-- **💬 Active Community Support** — Join **[@KPSBots](https://t.me/KPSBots)** for updates and help.
+- **💬 Active Community Support** — Join **[@KPSBots](https://telegram.me/KPSBots)** for updates and help.
 
 </details>
 
