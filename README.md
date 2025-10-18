@@ -1,6 +1,6 @@
 <div align=center>
 
-# <strong>KPSML-X</strong>
+# KPSML-X
 
 <p>
     <a href="https://github.com/Tamilupdates/KPSML-X">
@@ -304,15 +304,14 @@ heroku logs -a APP_NAME
 **All Heroku CLI Commands :** [Click Here](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-config-set)
 
 ---
+</details>
 
-# ***Variables Description:***
+---
 
-- `UPSTREAM_REPO`: GitHub repository URL, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}`. `Str`
+## Variables Descriptions
 
-- Any change in docker you need to deploy/build again with updated repo to take effect. 
-              - **No Need to delete .gitignore file or any File**
-
-- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `hk_kpsmlx`. `Str`
+<details>
+  <summary><b>View All Variables  <kbd>Click Here</kbd></b></summary>
 
 - `BOT_TOKEN`: Telegram Bot Token that you got from [BotFather](https://t.me/BotFather). `Str`
 
@@ -322,16 +321,24 @@ heroku logs -a APP_NAME
 
 - `TELEGRAM_HASH`: This is to authenticate your Telegram account for downloading Telegram files. You can get this from <https://my.telegram.org>. `Str`
 
-- `BASE_URL`: Valid BASE URL where the bot is deployed to use torrent web files selection. Format of URL should be `https://app-name-random_code.herokuapp.com/`, where `app-name` is the name of your heroku app Paste the URL got when the App was Made. `Str`
+- `BASE_URL`: Valid BASE URL where the bot is deployed to use torrent web files selection.
+  - **Heroku Deployment**: Format of URL should be `https://app-name-random_code.herokuapp.com/`, where `app-name` is the name of your heroku app Paste the URL got when the App was Made. `Str`
 
-- `TORRENT_TIMEOUT`: Timeout of dead torrents downloading with qBittorrent and Aria2c in seconds. `Int`
-  > Must Add else Bot Crashes! Set to 0 even not Needed
+  - **VPS Deployment**: Format of URL should be `http://myip`, where `myip` is the IP/Domain(public) of your bot or if you have chosen port other than `80` so write it in this format `http://myip:port` (`http` and not `https`). `Str`
 
 - `DATABASE_URL`: Database URL of MongoDb to store all your files and Vars. Adding this will be Helpful. `Str`
 
+- `UPSTREAM_REPO`: GitLab repository URL, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. `Str`.
+    - **NOTE**:
+        - Any change in docker you need to deploy/build again with updated repo to take effect. 
+        - **No Need to delete .gitignore file or any File**
+
+- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `hk_kpsmlx`. `Str`
+
+</details>
+
 ---
 
-## ***Branch Specifications:***
+## Branch Specifications
 
 - All files to be Uploaded in `main` Branch and set Upstream as `hk_kpsmlx` Branch
-</details>
