@@ -26,7 +26,7 @@
 
 ---
 
-## ✨ Key Highlights
+## 📌 Key Highlights
 
 <details>
   <summary><strong>View All Highlights  <kbd>Click Here</kbd></strong></summary>
