@@ -26,21 +26,30 @@
 </div>
 
 ---
-## ✨ Core Capabilities
 
-_KPSML-X is your ultimate, hassle-free file management bot. Engineered for performance and flexibility, here’s why it's indispensable:_
+## 📌 Key Highlights
 
-| Feature | Description |
-| :--- | :--- |
-| **🌐 Universal Downloader** | Supports torrents, Mega, Google Drive, direct links, and every source covered by `yt-dlp`. |
-| **☁️ Cloud Uploader** | Seamlessly transfer files to **Google Drive**, Telegram Cloud, **Rclone**, or dedicated DDL servers. |
-| **📦 Smart File Handling** | Includes automatic renaming, sophisticated metadata tagging, and organization features. |
-| **🧠 Intelligent Automation** | Features **auto-resume**, retry logic, and built-in cleanup for 24/7 reliability without downtime. |
-| **⚙️ Advanced Controls** | Manage all operations (downloads, uploads, settings) directly via Telegram commands (`/bs`, `/mirror`, etc.). |
-| **🎯 Multi-Deployment Ready** | Flexible setup across **Heroku**, Docker, VPS, or instant deployment with **Google Colab**. |
-| **🔐 Secure & Private** | Full access control via **owner-only commands** and customizable user whitelisting. |
-| **💨 Lightweight Performance** | Built on an optimized Python & Pyrogram asynchronous engine for maximum speed and minimal latency. |
-| **💬 Active Community Support** | Get instant updates and support by joining our channel: **[@KPSBots](https://t.me/KPSBots)** |
+_KPSML-X is designed to make file management seamless, fast, and flexible. Here’s what makes it stand out:_
+
+- **🌐 Universal Downloader** — Supports torrents, Mega, Google Drive, direct links, and all `yt-dlp` sites.  
+
+- **☁️ Cloud Uploader** — Upload files to Google Drive, Telegram Cloud, Rclone, or DDL servers with ease.  
+
+- **📦 Smart File Handling** — Automatic renaming, metadata tagging, and organization.  
+
+- **🧠 Intelligent Automation** — Auto-resume, retry, and cleanup for 24×7 reliability.  
+
+- **⚙️ Advanced Controls** — Manage downloads, uploads, and settings directly from Telegram (`/bs`, `/mirror`, `/leech`).  
+
+- **🎯 Multi-Deployment Ready** — Deploy on Heroku, Docker, VPS, or Google Colab.  
+
+- **🔐 Secure & Private** — Owner-only commands, user whitelisting, and access control.  
+
+- **💨 Lightweight Performance** — Optimized Python & Pyrogram async engine for speed.  
+
+- **💬 Active Community Support** — Join **[@KPSBots](https://t.me/KPSBots)** for updates and help.
+
+---
 
 ## 🚀 Deployment Guide (VPS)
 
