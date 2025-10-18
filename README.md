@@ -10,9 +10,9 @@
     </a>
 </p>
 
-
 ### <img src="https://graph.org/file/504ba776ef0724a4ae85b.png" width="25" alt="Google Colab Logo"> Google Colab : [Deploy Link](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
 
+---
 
 <a href="https://github.com/Tamilupdates/KPSML-X/fork"><img alt="Forks" src="https://img.shields.io/github/forks/Tamilupdates/KPSML-X?style=for-the-badge&logo=git&color=orange"></a> <a href="https://github.com/Tamilupdates/KPSML-X/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Tamilupdates/KPSML-X?style=for-the-badge&logo=github&color=FFD700"></a>
 <a href="https://hub.docker.com/r/nanthakps/kpsmlx"><img src="https://img.shields.io/docker/pulls/nanthakps/kpsmlx?style=for-the-badge&logo=docker" alt="Docker Pulls"></a>
