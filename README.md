@@ -1,6 +1,6 @@
 <div align="center">
 
-#@ ⚡️ KPSML-X: Ultimate Multi-Cloud Telegram Leech Bot
+## ⚡️ KPSML-X: Ultimate Multi-Cloud Telegram Leech Bot
 
 # Upstream Repo
 
