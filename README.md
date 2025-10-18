@@ -1,6 +1,6 @@
 <div align=center>
 
-# KPSML-X
+# <strong>KPSML-X</strong>
 
 <p>
     <a href="https://github.com/Tamilupdates/KPSML-X">
