@@ -14,40 +14,33 @@
 
 ---
 
-<a href="https://github.com/Tamilupdates/KPSML-X/fork"><img alt="Forks" src="https://img.shields.io/github/forks/Tamilupdates/KPSML-X?style=for-the-badge&logo=git&color=orange"></a> <a href="https://github.com/Tamilupdates/KPSML-X/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Tamilupdates/KPSML-X?style=for-the-badge&logo=github&color=FFD700"></a>
-<a href="https://hub.docker.com/r/nanthakps/kpsmlx"><img src="https://img.shields.io/docker/pulls/nanthakps/kpsmlx?style=for-the-badge&logo=docker" alt="Docker Pulls"></a>
+<a href="https://github.com/Tamilupdates/KPSML-X/fork"><img alt="Forks" src="https://img.shields.io/github/forks/Tamilupdates/KPSML-X?style=plastic&logo=git&color=orange&label=Forks"></a> 
+<a href="https://github.com/Tamilupdates/KPSML-X/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Tamilupdates/KPSML-X?style=plastic&logo=github&color=FFD700&label=Stars"></a>
+<a href="https://hub.docker.com/r/nanthakps/kpsmlx"><img src="https://img.shields.io/docker/pulls/nanthakps/kpsmlx?style=plastic&logo=docker&label=Pulls" alt="Docker Pulls"></a>
 
-<a href="https://telegram.me/KPSBots"><img alt="Telegram Channel" src="https://img.shields.io/badge/Join%20on%20Telegram%20Channel-blue?style=for-the-badge&logo=telegram&logoColor=white" width="250"></a>
+<a href="https://telegram.me/KPSBots"><img alt="Telegram Channel" src="https://img.shields.io/badge/Join%20on%20Telegram%20Channel-blue?style=plastic&logo=telegram&logoColor=white" width="250"></a>
+
 
 ### ⚡️ Download Anything. Upload Everywhere. 🔥
 
 </div>
 
 ---
+## ✨ Core Capabilities
 
-### 🚀 Key Highlights
-    
-- **🌐 Universal Downloader** — Fetch from torrents, Mega, Google Drive, direct links, or any `yt-dlp` supported site.
+_KPSML-X is your ultimate, hassle-free file management bot. Engineered for performance and flexibility, here’s why it's indispensable:_
 
-- **☁️ Cloud Uploader** — Mirror files to Google Drive, Telegram Cloud, Rclone remotes, or DDL servers in seconds.  
-
-- **📦 Smart File Handling** — Automatically renames, tags, and organizes media metadata (titles, languages, etc.).  
-
-- **🧠 Intelligent Automation** — Auto-cleanup, retry, and resume mechanisms that keep tasks stable 24×7.  
-
-- **⚙️ Advanced Controls** — Manage everything directly from Telegram using rich command system (`/bs`, `/mirror`, `/leech`, etc.).  
-
-- **🎯 Multi-Deployment Ready** — Deploy anywhere: **Heroku**, **Docker**, **VPS**, or even **Google Colab**.  
-
-- **🧩 Modular Core** — Extend or customize every module easily with minimal Python knowledge.  
-
-- **🔐 Secure & Private** — Built-in access control, user whitelisting, and owner-only command filters.  
-
-- **🪶 Lightweight Performance** — Optimized async codebase using **Pyrogram** + **uvloop** for maximum efficiency.  
-
-- **💬 Active Support** — Real-time help, updates, and community chat via [@KPSBots](https://telegram.me/KPSBots).
-
----
+| Feature | Description |
+| :--- | :--- |
+| **🌐 Universal Downloader** | Supports torrents, Mega, Google Drive, direct links, and every source covered by `yt-dlp`. |
+| **☁️ Cloud Uploader** | Seamlessly transfer files to **Google Drive**, Telegram Cloud, **Rclone**, or dedicated DDL servers. |
+| **📦 Smart File Handling** | Includes automatic renaming, sophisticated metadata tagging, and organization features. |
+| **🧠 Intelligent Automation** | Features **auto-resume**, retry logic, and built-in cleanup for 24/7 reliability without downtime. |
+| **⚙️ Advanced Controls** | Manage all operations (downloads, uploads, settings) directly via Telegram commands (`/bs`, `/mirror`, etc.). |
+| **🎯 Multi-Deployment Ready** | Flexible setup across **Heroku**, Docker, VPS, or instant deployment with **Google Colab**. |
+| **🔐 Secure & Private** | Full access control via **owner-only commands** and customizable user whitelisting. |
+| **💨 Lightweight Performance** | Built on an optimized Python & Pyrogram asynchronous engine for maximum speed and minimal latency. |
+| **💬 Active Community Support** | Get instant updates and support by joining our channel: **[@KPSBots](https://t.me/KPSBots)** |
 
 ## 🚀 Deployment Guide (VPS)
 
