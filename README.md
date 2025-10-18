@@ -1,6 +1,6 @@
 <div align=center>
 
-## KPSML-X on Heroku Deploy using Google Colab
+# KPSML-X
 
 <p>
     <a href="https://github.com/Tamilupdates/KPSML-X">
