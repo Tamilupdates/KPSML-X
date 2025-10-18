@@ -40,6 +40,22 @@ Clone this repository:
 git clone https://github.com/Tamilupdates/KPSML-X kpsml-x && cd kpsml-x
 ```
 
+Setting up config file:
+    
+```
+cp config_sample.env config.env
+```
+
+- Remove the first line saying:
+
+```
+_____REMOVE_THIS_LINE_____=True
+```
+
+_Fill up rest of the fields. Meaning of each field is discussed below._
+
+**NOTE**: All values must be filled between quotes, even if it's `Int`, `Bool` or `List`.
+
 ---
 
 ## 3. Build and Run the Docker Image
@@ -302,8 +318,6 @@ heroku logs -a APP_NAME
 ---
 
 **All Heroku CLI Commands :** [Click Here](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-config-set)
-
----
 </details>
 
 ---
