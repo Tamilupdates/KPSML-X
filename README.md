@@ -16,17 +16,7 @@
 
 <a href="https://telegram.me/KPSBots"><img alt="Telegram Channel" src="https://img.shields.io/badge/Join%20on%20Telegram%20Channel-blue?style=plastic&logo=telegram&logoColor=white" width="250"></a>
 
-<div style="border: 2px solid #4CAF50; 
-            border-radius: 15px; 
-            padding: 12px 20px; 
-            display: inline-block; 
-            background-color: #e8f5e9; 
-            font-weight: bold; 
-            font-size: 18px;
-            color: #1b5e20;">
-  ⚡️ Download Anything. Upload Everywhere. 🔥
-</div>
-
+***⚡️ Download Anything. Upload Everywhere. 🔥***
 
 ---
 
