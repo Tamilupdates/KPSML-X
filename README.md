@@ -35,23 +35,23 @@
 
 _KPSML-X is designed to make file management seamless, fast, and flexible._
 
-- **🌐 Universal Downloader** — Supports torrents, Mega, Google Drive, direct links, and all `yt-dlp` sites.  
+- **🌐 Universal Downloader** - Supports torrents, Mega, Google Drive, direct links, and all `yt-dlp` sites.  
 
-- **☁️ Cloud Uploader** — Upload files to Google Drive, Telegram Cloud, Rclone, or DDL servers with ease.  
+- **☁️ Cloud Uploader** - Upload files to Google Drive, Telegram Cloud, Rclone, or DDL servers with ease.  
 
-- **📦 Smart File Handling** — Automatic renaming, metadata tagging, and organization.  
+- **📦 Smart File Handling** - Automatic renaming, metadata tagging, and organization.  
 
-- **🧠 Intelligent Automation** — Auto-resume, retry, and cleanup for 24×7 reliability.  
+- **🧠 Intelligent Automation** - Auto-resume, retry, and cleanup for 24×7 reliability.  
 
-- **⚙️ Advanced Controls** — Manage downloads, uploads, and settings directly from Telegram (`/bs`, `/mirror`, `/leech`).  
+- **⚙️ Advanced Controls** - Manage downloads, uploads, and settings directly from Telegram (`/bs`, `/mirror`, `/leech`).  
 
-- **🎯 Multi-Deployment Ready** — Deploy on Heroku, Docker, VPS, or Google Colab.  
+- **🎯 Multi-Deployment Ready** - Deploy on Heroku, Docker, VPS, or Google Colab.  
 
-- **🔐 Secure & Private** — Owner-only commands, user whitelisting, and access control.  
+- **🔐 Secure & Private** - Owner-only commands, user whitelisting, and access control.  
 
-- **💨 Lightweight Performance** — Optimized Python & Pyrogram async engine for speed.  
+- **💨 Lightweight Performance** - Optimized Python & Pyrogram async engine for speed.  
 
-- **💬 Active Community Support** — Join **[@KPSBots](https://telegram.me/KPSBots)** for updates and help.
+- **💬 Active Community Support** - Join **[@KPSBots](https://telegram.me/KPSBots)** for updates and help.
 
 </details>
 
