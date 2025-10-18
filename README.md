@@ -10,24 +10,28 @@
     </a>
 </p>
 
-### <img src="https://graph.org/file/504ba776ef0724a4ae85b.png" width="25" alt="Google Colab Logo"> Google Colab : [Deploy Link](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
-
----
-
 <a href="https://github.com/Tamilupdates/KPSML-X/fork"><img alt="Forks" src="https://img.shields.io/github/forks/Tamilupdates/KPSML-X?style=plastic&logo=git&color=orange&label=Forks"></a> 
 <a href="https://github.com/Tamilupdates/KPSML-X/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Tamilupdates/KPSML-X?style=plastic&logo=github&color=FFD700&label=Stars"></a>
 <a href="https://hub.docker.com/r/nanthakps/kpsmlx"><img src="https://img.shields.io/docker/pulls/nanthakps/kpsmlx?style=plastic&logo=docker&label=Pulls" alt="Docker Pulls"></a>
 
 <a href="https://telegram.me/KPSBots"><img alt="Telegram Channel" src="https://img.shields.io/badge/Join%20on%20Telegram%20Channel-blue?style=plastic&logo=telegram&logoColor=white" width="250"></a>
 
-
 ### ⚡️ Download Anything. Upload Everywhere. 🔥
+
+---
+
+### <img src="https://graph.org/file/504ba776ef0724a4ae85b.png" width="25" alt="Google Colab Logo"> Google Colab : [Deploy Link](https://colab.research.google.com/drive/1ntoqoj3jDq2FtU2-joizh0DO64uoec9q)
 
 </div>
 
 ---
 
 ## 📌 Key Highlights
+
+<details>
+  <summary><strong>View All Highlights  <kbd>Click Here</kbd></strong></summary>
+
+---
 
 _KPSML-X is designed to make file management seamless, fast, and flexible. Here’s what makes it stand out:_
 
@@ -48,6 +52,8 @@ _KPSML-X is designed to make file management seamless, fast, and flexible. Here�
 - **💨 Lightweight Performance** — Optimized Python & Pyrogram async engine for speed.  
 
 - **💬 Active Community Support** — Join **[@KPSBots](https://t.me/KPSBots)** for updates and help.
+
+</details>
 
 ---
 
