@@ -33,7 +33,9 @@
 
 ---
 
-_KPSML-X is designed to make file management seamless, fast, and flexible. Here’s what makes it stand out:_
+_KPSML-X is designed to make file management seamless, fast, and flexible._
+
+**Here’s what makes it stand out:**
 
 - **🌐 Universal Downloader** — Supports torrents, Mega, Google Drive, direct links, and all `yt-dlp` sites.  
 
