@@ -1,10 +1,8 @@
 <div align="center">
 
-# ⚡️ KPSML-X: Upstream Repo
+## ⚡️ KPSML-X: Upstream Repo
 
-## Ultimate Multi-Cloud Telegram Leech Bot
-
-## 🔥 Download Anything. Upload Everywhere. 🔥
+### 🔥 Download Anything. Upload Everywhere. 🔥
 
 <a href="https://github.com/Tamilupdates/KPSML-X/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Tamilupdates/KPSML-X?style=for-the-badge&logo=github&color=FFD700"></a>
 <a href="https://t.me/KPSBots"><img alt="Telegram" src="https://img.shields.io/badge/Join%20on%20Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"></a>
