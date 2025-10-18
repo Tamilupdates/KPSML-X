@@ -35,8 +35,6 @@
 
 _KPSML-X is designed to make file management seamless, fast, and flexible._
 
-**Here’s what makes it stand out:**
-
 - **🌐 Universal Downloader** — Supports torrents, Mega, Google Drive, direct links, and all `yt-dlp` sites.  
 
 - **☁️ Cloud Uploader** — Upload files to Google Drive, Telegram Cloud, Rclone, or DDL servers with ease.  
