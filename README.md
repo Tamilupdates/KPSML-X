@@ -318,7 +318,7 @@ nano config.env
   BASE_URL = ""
   SET_COMMANDS = "True"
   UPSTREAM_REPO = "https://github.com/Tamilupdates/KPSML-X"
-  UPSTREAM_BRANCH = "hk_kpsmlx"
+  UPSTREAM_BRANCH = "kpsmlx"
   ```
 - After Setup Exit from Editor via `CTRL + X`, followed via `y` and `Enter`...
 
@@ -388,7 +388,7 @@ heroku logs -a APP_NAME
         - Any change in docker you need to deploy/build again with updated repo to take effect. 
         - **No Need to delete .gitignore file or any File**
 
-- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `hk_kpsmlx`. `Str`
+- `UPSTREAM_BRANCH`: Upstream branch for update. Default is `kpsmlx`. `Str`
 
 </details>
 
@@ -396,5 +396,5 @@ heroku logs -a APP_NAME
 
 ## 🌿 Branch Specifications
 
-- All files to be Uploaded in `main` Branch and set Upstream as `hk_kpsmlx` Branch.
-- View the **Upstream Branch**: **[hk_kpsmlx](https://github.com/Tamilupdates/KPSML-X/tree/hk_kpsmlx)**
+- All files to be Uploaded in `main` Branch and set Upstream as `kpsmlx` Branch.
+- View the **Upstream Branch**: **[kpsmlx](https://github.com/Tamilupdates/KPSML-X/tree/kpsmlx)**
