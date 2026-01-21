@@ -3,7 +3,7 @@ class KPSMLStyle:
     # ----------------------
     # async def start(client, message) ---> __main__.py
     ST_BN1_NAME = '🤖 Repo'
-    ST_BN1_URL = 'https://github.com/Tamilupdates/KPSML-X'
+    ST_BN1_URL = 'https://github.com/maran117/KPSML-X'
     ST_BN2_NAME = 'Updates 🔥'
     ST_BN2_URL = 'https://telegram.me/KPSBots'
     ST_MSG = '''<b><i>This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram or to ddl servers.</i>\n
@@ -177,14 +177,14 @@ Type {help_command} to get a list of available commands</b>'''
 
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n┃ {Bar}'
-    PROCESSED =         '\n┠ <b>Processed:</b> {Processed}'
-    STATUS =            '\n┠ <b>Status:</b> <a href="{Url}">{Status}</a>'
+    PROCESSED =         '\n┠ <b>🟢Processed:</b> {Processed}'
+    STATUS =            '\n┠ <b>💎Status:</b> <a href="{Url}">{Status}</a>'
     ETA =                                                ' | <b>ETA:</b> {Eta}'
-    SPEED =             '\n┠ <b>Speed:</b> {Speed}'
+    SPEED =             '\n┠ <b>🔥Speed:</b> {Speed}'
     ELAPSED =                                     ' | <b>Elapsed:</b> {Elapsed}'
-    ENGINE =            '\n┠ <b>Engine:</b> {Engine}'
-    STA_MODE =          '\n┠ <b>Mode:</b> {Mode}'
-    SEEDERS =           '\n┠ <b>Seeders:</b> {Seeders} | '
+    ENGINE =            '\n┠ <b>❤️Engine:</b> {Engine}'
+    STA_MODE =          '\n┠ <b>⏬Mode:</b> {Mode}'
+    SEEDERS =           '\n┠ <b>📁Seeders:</b> {Seeders} | '
     LEECHERS =                                           '<b>Leechers:</b> {Leechers}'
 
     ####--------SEEDING----------
