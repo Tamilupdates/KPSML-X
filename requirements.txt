@@ -45,3 +45,5 @@ uvloop==0.21.0
 xattr
 yt-dlp
 setuptools
+pymediainfo
+pyaes
