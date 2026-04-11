@@ -41,11 +41,11 @@ class DbManger:
             async for row in rows:
                 uid = row['_id']
                 del row['_id']
-                thumb_path = f'Thumbnails/{uid}.jpg'
+                thumb_path = f'thumbnails/{uid}.jpg'
                 rclone_path = f'wcl/{uid}.conf'
                 if row.get('thumb'):
-                    if not await aiopath.exists('Thumbnails'):
-                        await makedirs('Thumbnails')
+                    if not await aiopath.exists('thumbnails'):
+                        await makedirs('thumbnails')
                     async with aiopen(thumb_path, 'wb+') as f:
                         await f.write(row['thumb'])
                     row['thumb'] = thumb_path
@@ -57,6 +57,7 @@ class DbManger:
                     row['rclone'] = rclone_path
                 user_data[uid] = row
             LOGGER.info("Users data has been imported from Database")
+
         # Rss Data
         if await self.__db.rss[bot_id].find_one():
             # return a dict ==> {_id, title: {link, last_feed, last_name, inf, exf, command, paused}
@@ -111,11 +112,21 @@ class DbManger:
     async def update_user_data(self, user_id):
         if self.__err:
             return
-        data = user_data[user_id]
+        data = user_data[user_id].copy()
         if data.get('thumb'):
-            del data['thumb']
+            thumb_path = data['thumb']
+            if await aiopath.exists(thumb_path):
+                async with aiopen(thumb_path, 'rb+') as f:
+                    data['thumb'] = await f.read()
+            else:
+                del data['thumb']
         if data.get('rclone'):
-            del data['rclone']
+            rclone_path = data['rclone']
+            if await aiopath.exists(rclone_path):
+                async with aiopen(rclone_path, 'rb+') as f:
+                    data['rclone'] = await f.read()
+            else:
+                del data['rclone']
         await self.__db.users[bot_id].replace_one({'_id': user_id}, data, upsert=True)
         self.__conn.close
 
