@@ -384,7 +384,7 @@ heroku logs -a APP_NAME
 
 - `DATABASE_URL`: Database URL of MongoDb to store all your files and Vars. Adding this will be Helpful. `Str`
 
-- `UPSTREAM_REPO`: GitLab repository URL, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. `Str`.
+- `UPSTREAM_REPO`: GitHub repository URL, if your repo is private add `https://username:{githubtoken}@github.com/{username}/{reponame}` format. `Str`.
     - **NOTE**:
         - Any change in docker you need to deploy/build again with updated repo to take effect. 
         - **No Need to delete .gitignore file or any File**
