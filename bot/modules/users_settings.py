@@ -142,7 +142,7 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
         buttons.ibutton("Close", f"userset {user_id} close", "footer")
         button = buttons.build_menu(2)
     elif key == 'leech':
-        if user_dict.get('as_doc', False) or 'as_doc' not in user_dict and config_dict['AS_DOCUMENT']:
+        if user_dict.get('as_doc', config_dict['AS_DOCUMENT']):
             ltype = "DOCUMENT"
             buttons.ibutton("Send As Media", f"userset {user_id} doc")
         else:
@@ -472,7 +472,7 @@ async def edit_user_settings(client, query):
         await query.answer()
         await update_user_settings(query, data[2])
     elif data[2] == "doc":
-        update_user_ldata(user_id, 'as_doc', not user_dict.get('as_doc', False))
+        update_user_ldata(user_id, 'as_doc', not user_dict.get('as_doc', config_dict['AS_DOCUMENT']))
         await query.answer()
         await update_user_settings(query, 'leech')
         if DATABASE_URL:
