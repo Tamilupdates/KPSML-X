@@ -41,11 +41,11 @@ class DbManger:
             async for row in rows:
                 uid = row['_id']
                 del row['_id']
-                thumb_path = f'thumbnails/{uid}.jpg'
+                thumb_path = f'Thumbnails/{uid}.jpg'
                 rclone_path = f'wcl/{uid}.conf'
                 if row.get('thumb'):
-                    if not await aiopath.exists('thumbnails'):
-                        await makedirs('thumbnails')
+                    if not await aiopath.exists('Thumbnails'):
+                        await makedirs('Thumbnails')
                     async with aiopen(thumb_path, 'wb+') as f:
                         await f.write(row['thumb'])
                     row['thumb'] = thumb_path

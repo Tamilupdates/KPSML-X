@@ -6,7 +6,7 @@ from os import path as ospath
 from pkg_resources import get_distribution, DistributionNotFound
 from aiofiles import open as aiopen
 from aiofiles.os import remove as aioremove, path as aiopath, mkdir
-from re import match as re_match
+from re import match as re_match, search as re_search
 from time import time
 from html import escape
 from uuid import uuid4
@@ -17,7 +17,7 @@ from asyncio.subprocess import PIPE
 from functools import partial, wraps
 from concurrent.futures import ThreadPoolExecutor
 
-from aiohttp import ClientSession as aioClientSession
+from aiohttp import ClientSession as aioClientSession, ClientTimeout
 from psutil import virtual_memory, cpu_percent, disk_usage
 from requests import get as rget
 from mega import MegaApi
@@ -488,15 +488,43 @@ def new_thread(func):
     return wrapper
 
 
+def parse_version_text(text):
+    """Read vMAJOR.MINOR.PATCH-STATE out of the source text of bot/version.py (nothing is executed)."""
+    found = {}
+    for key in ('MAJOR', 'MINOR', 'PATCH', 'STATE'):
+        m = re_search(rf"{key}\s*=\s*['\"]([^'\"]*)['\"]", text or '')
+        if not m:
+            return ''
+        found[key] = m.group(1)
+    return f"v{found['MAJOR']}.{found['MINOR']}.{found['PATCH']}-{found['STATE']}"
+
+
+async def get_official_version():
+    url = "https://raw.githubusercontent.com/Tamilupdates/KPSML-X/kpsmlx/bot/version.py"
+    try:
+        async with aioClientSession(timeout=ClientTimeout(total=15)) as session:
+            async with session.get(url) as resp:
+                if resp.status != 200:
+                    LOGGER.error(f"Official version check failed: HTTP {resp.status}")
+                    return 'N/A'
+                return parse_version_text(await resp.text()) or 'N/A'
+    except Exception as e:
+        LOGGER.error(f"Official version check failed: {e}")
+        return 'N/A'
+
+
 async def compare_versions(v1, v2):
-    v1_parts = [int(part) for part in v1.split('-')[0][1:].split('.')]
-    v2_parts = [int(part) for part in v2.split('-')[0][1:].split('.')]
-    for i in range(3):
-        v1_part, v2_part = v1_parts[i], v2_parts[i]
-        if v1_part < v2_part:
-            return "New Version Update is Available! Check Now!"
-        elif v1_part > v2_part:
-            return "More Updated! Kindly Contribute in Official"
+    try:
+        v1_parts = [int(part) for part in v1.split('-')[0][1:].split('.')]
+        v2_parts = [int(part) for part in v2.split('-')[0][1:].split('.')]
+        for i in range(3):
+            v1_part, v2_part = v1_parts[i], v2_parts[i]
+            if v1_part < v2_part:
+                return "New Version Update is Available! Check Now!"
+            elif v1_part > v2_part:
+                return "More Updated! Kindly Contribute in Official"
+    except (ValueError, IndexError, AttributeError):
+        return "Unable to check for updates right now"
     return "Already up to date with latest version"
 
 
@@ -566,7 +594,7 @@ async def get_stats(event, key="home"):
         if await aiopath.exists('.git'):
             last_commit = (await cmd_exec("git log -1 --pretty='%cd ( %cr )' --date=format-local:'%d/%m/%Y'", True))[0]
             changelog = (await cmd_exec("git log -1 --pretty=format:'<code>%s</code> <b>By</b> %an'", True))[0]
-        official_v = (await cmd_exec("curl -o latestversion.py https://github.com/Tamilupdates/KPSML-X/raw/refs/heads/kpsmlx/bot/version.py -s && python3 latestversion.py && rm latestversion.py", True))[0]
+        official_v = await get_official_version()
         msg = BotTheme('REPO_STATS',
             last_commit=last_commit,
             bot_version=get_version(),
@@ -716,6 +744,10 @@ async def set_commands(client):
             BotCommand(
                 BotCommands.StatusCommand[0],
                 f'or /{BotCommands.StatusCommand[1]} Get Bot All Status Stats Message',
+            ),
+            BotCommand(
+                BotCommands.TasksCommand[-1],
+                'Show total Bot Tasks & your Tasks count',
             ),
             BotCommand(
                 BotCommands.StatsCommand[0],
